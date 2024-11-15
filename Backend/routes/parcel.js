@@ -4,13 +4,12 @@ const {createParcel, getAllParcels, updateParcel, getOneParcel, getUserParcel, d
 // const { verifyToken, verifyTokenAndAuthorization } = require('../middlewares/verifyToken');
 
 
-
 //ADD PARCEL 
 router.post("/", createParcel)
 
 
 //GET ALL PARCEL
-router.get("/", getAllParcels)
+router.get("/",  getAllParcels)
 
 
 // UPDATE PARCEL
@@ -28,7 +27,6 @@ router.post("/me", getUserParcel)
 // DELETE PARCEL
 
 router.delete("/:id", deleteParcel)
-
 
 
 
