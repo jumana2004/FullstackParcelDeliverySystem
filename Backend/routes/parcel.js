@@ -1,16 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const {createParcel, getAllParcels, updateParcel, getOneParcel, getUserParcel, deleteParcel} = require("../controllers/parcel");
-// const { verifyToken, verifyTokenAndAuthorization } = require('../middlewares/verifyToken');
-
+const { verifyToken, verifyTokenAndAuthorization } = require('../middlewares/verifyToken');
 
 
 //ADD PARCEL 
-router.post("/", createParcel)
+router.post("/",verifyToken, createParcel)
 
 
 //GET ALL PARCEL
-router.get("/", getAllParcels)
+router.get("/", verifyTokenAndAuthorization, getAllParcels)
 
 
 // UPDATE PARCEL
@@ -28,7 +27,6 @@ router.post("/me", getUserParcel)
 // DELETE PARCEL
 
 router.delete("/:id", deleteParcel)
-
 
 
 
