@@ -1,9 +1,7 @@
 
 const Parcels = () => {
   return (
-    <div>
-      
-    </div>
+    <div className="text-2xl text-white">Parcel</div>
   )
 }
 
